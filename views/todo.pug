@@ -1,0 +1,10 @@
+doctype html
+html
+    head
+        title todo
+    body
+        h1 Le Todo
+        p id = #{todo.dataValues.id}, message = #{todo.dataValues.message}
+        p Fait ? : #{todo.dataValues.completion}
+        p Créé le #{todo.dataValues.createdAt}
+        p Update le #{todo.dataValues.updatedAt}

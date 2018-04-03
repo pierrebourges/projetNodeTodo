@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title todos
+    body
+        h1 Ajouter un todo
+        form(method='post' action='/todos/' + todo.dataValues.id + '?_method=PATCH')
+            div.form-group
+                label(for='message') Message :
+                input#message.form-control(type='text', placeholder= todo.dataValues.message name='message')
+            div.form-group
+                label(for='completion') Completion :
+                input#completion.form-control(type='checkbox' name='completion')
+            button.btn.btn-primary(type='submit') Editer

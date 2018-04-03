@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title todos
+    body
+        h1 Ajouter un todo
+        form(method='post' action='/users/' + user.dataValues.id + '?_method=PATCH')
+            div.form-group
+                label(for='pseudo') Pseudo :
+                input#pseudo.form-control(type='text', placeholder= user.dataValues.pseudo name='pseudo')
+            div.form-group
+                label(for='password') Mot de passe :
+                input#password.form-control(type='text' name='password')
+            button.btn.btn-primary(type='submit') Editer

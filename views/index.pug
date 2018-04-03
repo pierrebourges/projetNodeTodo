@@ -1,0 +1,12 @@
+doctype html
+html
+    head
+        title todos
+    body
+        h1 Liste de todos
+        a(href='/todos/add') Ajouter un todo
+        each todo in todos
+            p id = #{todo.dataValues.id}, message = #{todo.dataValues.message}, Est-ce fait? = #{todo.dataValues.completion}
+            a(href='/todos/'+ todo.dataValues.id+ '/edit') Editer
+            form(method='POST' action='/todos/' + todo.dataValues.id + '?_method=DELETE')
+                button.btn.btn-primary(type='submit') Supprimer

@@ -1,0 +1,12 @@
+doctype html
+html
+    head
+        title Users
+    body
+        h1 Liste de Users
+        a(href='/users/add') Ajouter un user
+        each user in users
+            p id = #{user.dataValues.id}, pseudo = #{user.dataValues.pseudo}
+            a(href='/users/'+ user.dataValues.id+ '/edit') Editer
+            form(method='POST' action='/users/' + user.dataValues.id + '?_method=DELETE')
+                button.btn.btn-primary(type='submit') Supprimer

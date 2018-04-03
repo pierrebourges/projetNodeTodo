@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title users
+    body
+        h1 Ajouter un user
+        form(method='POST' action='/users/')
+            div.form-group
+                label(for='pseudo') Pseudo:
+                input#pseudo.form-control(type='text', placeholder='Pseudo' name='pseudo')
+            div.form-group
+                label(for='password') Mot de passe :
+                input#password.form-control(type='text' name='password')
+            button.btn.btn-primary(type='submit') Créer
